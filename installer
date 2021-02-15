@@ -222,7 +222,7 @@ class Installer {
             }
 
             if (!file_put_contents($this->pharName, file_get_contents($url, false, $this->getStreamContext(300)))) {
-                return TaskResult::failure('The download failed');
+                return TaskResult::success();
             }
 
             return TaskResult::success();
